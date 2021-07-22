@@ -12,7 +12,7 @@ class Coin extends Component {
         const tailsImg = "https://tinyurl.com/react-coin-tails-jpg"
         return (
             <div className={`Coin ${this.props.flipping? 'flipping' : ''}`}>
-                {this.props.face === 'heads' ? <img src={headsImg} alt="HEADS"></img> : <img src={tailsImg} alt="TAILS"></img>}
+                {this.props.face === 'heads' ? <img src={headsImg} alt="HEADS" /> : <img src={tailsImg} alt="TAILS" />}
             </div>
         );
     }

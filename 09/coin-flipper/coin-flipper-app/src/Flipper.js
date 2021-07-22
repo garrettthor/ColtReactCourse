@@ -18,7 +18,7 @@ class Flipper extends Component {
     flip() {
         const newFace = this.state.face[Math.floor(Math.random()*2)]
         if (newFace === 'heads'){
-            console.log(newFace)
+            // console.log(newFace)
             this.setState(sta => {
                 return { headsTotal: sta.headsTotal + 1, flipping: true}
             })
@@ -26,7 +26,7 @@ class Flipper extends Component {
                 return { totalFlips: sta.totalFlips + 1}
             })
         } else {
-            console.log(newFace)
+            // console.log(newFace)
             this.setState(sta => {
                 return { tailsTotal: sta.tailsTotal + 1, flipping: true}
             })
