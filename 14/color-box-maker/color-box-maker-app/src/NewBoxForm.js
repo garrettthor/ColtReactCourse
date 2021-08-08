@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { v4 as uuid } from 'uuid';
 
 class NewBoxForm extends Component {
     constructor(props) {
@@ -13,14 +14,15 @@ class NewBoxForm extends Component {
     }
 
     handleChange(e) {
-        this.setState({ [e.target.name]: e.target.value});
+        this.setState({ [e.target.name]: e.target.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ [e.target.name]: e.target.value})
-        alert(this.state)
-        // this.props.addBox(this.state)
+        const newBox = { ...this.state, id: uuid()}
+        console.log(newBox)
+        this.props.addBox(newBox)
+        this.setState({ width: '', height: '', color: ''})
     }
 
     render() {
@@ -31,6 +33,7 @@ class NewBoxForm extends Component {
                     <input
                         type="number"
                         name="width"
+                        id="width"
                         value={this.state.width}
                         onChange={this.handleChange}
                     />
@@ -40,6 +43,7 @@ class NewBoxForm extends Component {
                     <input
                         type="number"
                         name="height"
+                        id="height"
                         value={this.state.height}
                         onChange={this.handleChange}
                     />
@@ -50,6 +54,7 @@ class NewBoxForm extends Component {
                     <input
                         type="text"
                         name="color"
+                        id="color"
                         value={this.state.color}
                         onChange={this.handleChange}
                     />
