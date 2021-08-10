@@ -1,0 +1,16 @@
+.Clicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.Clicker-button-displayed {
+    width: 200px;
+}
+
+.Clicker-button-hidden {
+    display: none;
+}
