@@ -1,0 +1,14 @@
+.LotteryBall-ball {
+    display: inline-block;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.75em;
+    background-color: tomato;
+    border-radius: 50%;
+    height: 2.25em;
+    width: 3em;
+    margin-right: 0.5em;
+    
+}
