@@ -1,0 +1,16 @@
+.Box {
+    height: 150px;
+    width: 150px;
+}
+
+.Box-color-lightblue {
+    background-color: #7ef6fc;
+}
+
+.Box-color-medblue {
+    background-color: #7eb7fc;
+}
+
+.Box-color-mintgreen {
+    background-color: #7efcc3;
+}
