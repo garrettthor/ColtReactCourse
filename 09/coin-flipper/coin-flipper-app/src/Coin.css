@@ -1,0 +1,17 @@
+.Coin img {
+    height: 100px;
+}
+
+.flipping {
+    animation-name: flipping;
+    animation-duration: 1s;
+}
+
+@keyframes flipping {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

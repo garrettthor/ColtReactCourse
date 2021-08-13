@@ -13,7 +13,7 @@ class Lottery extends Component {
         this.state = {
             nums: Array.from({ length: this.props.numBalls })
         }
-        this.generate = this.generate.bind(this)
+        this.generate = this.generate.bind(this);
     };
     
 
