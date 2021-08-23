@@ -20,7 +20,6 @@ class NewBoxForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const newBox = { ...this.state, id: uuid()}
-        console.log(newBox)
         this.props.addBox(newBox)
         this.setState({ width: '', height: '', color: ''})
     }
