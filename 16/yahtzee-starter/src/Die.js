@@ -7,7 +7,8 @@ class Die extends Component {
       <button
         className={"Die"}
         style={{ backgroundColor: this.props.locked ? "grey" : "black" }}
-        onClick={this.props.handleClick}
+        // add an inline arrow function, and then pass this.props.idx as the argument to be passed up, eventually to toggleLocked in Game.js
+        onClick={() => this.props.handleClick(this.props.idx)}
       >
         {this.props.val}
       </button>
