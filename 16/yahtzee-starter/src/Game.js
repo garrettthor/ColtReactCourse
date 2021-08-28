@@ -31,6 +31,8 @@ class Game extends Component {
     };
     this.roll = this.roll.bind(this);
     this.doScore = this.doScore.bind(this);
+    // The beneath line was not present, so it broke the handleClick in Die, Dice, and up to this function
+    this.toggleLocked = this.toggleLocked.bind(this);
   }
 
   roll(evt) {
