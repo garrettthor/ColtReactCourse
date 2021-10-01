@@ -48,13 +48,17 @@ class Game extends Component {
 
   toggleLocked(idx) {
     // toggle whether idx is in locked or not
-    this.setState(st => ({
-      locked: [
-        ...st.locked.slice(0, idx),
-        !st.locked[idx],
-        ...st.locked.slice(idx + 1)
-      ]
-    }));
+
+    // turn off toggling if out of rolls - fixes infinite re-roll bug
+    if (this.state.rollsLeft > 0){
+        this.setState(st => ({
+            locked: [
+              ...st.locked.slice(0, idx),
+              !st.locked[idx],
+              ...st.locked.slice(idx + 1)
+            ]
+          }));
+    }
   }
 
   doScore(rulename, ruleFn) {
@@ -82,7 +86,8 @@ class Game extends Component {
             <div className='Game-button-wrapper'>
               <button
                 className='Game-reroll'
-                disabled={this.state.locked.every(x => x)}
+                // the OR part added below disables the button no matter what whenb the rollsLeft is zero, instead of disable relying on every die being locked.
+                disabled={this.state.locked.every(x => x) || this.state.rollsLeft === 0}
                 onClick={this.roll}
               >
                 {this.state.rollsLeft} Rerolls Left
