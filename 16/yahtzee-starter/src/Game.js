@@ -60,7 +60,7 @@ class Game extends Component {
           }));
     }
   }
-
+ 
   doScore(rulename, ruleFn) {
     // evaluate this ruleFn with the dice and score this rulename
     this.setState(st => ({
