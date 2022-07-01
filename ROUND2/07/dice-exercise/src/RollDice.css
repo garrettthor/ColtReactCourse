@@ -1,0 +1,12 @@
+.RollDice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RollDice-Die-Container {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
